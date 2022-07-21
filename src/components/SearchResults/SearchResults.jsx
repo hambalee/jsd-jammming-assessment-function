@@ -1,8 +1,12 @@
-//import SearchResults.css
+import './SearchResults.css'
+import TrackList from '../TrackList/TrackList'
 
-const SearchResults = () => {
+const SearchResults = (props) => {
   return (
-    <div>SearchResults</div>
+    <div className="SearchResults">
+      <h2>Results</h2>
+      <TrackList isRemoval={false} tracks={props.searchResults} onAdd={props.onAdd} />
+    </div>
   )
 }
 
